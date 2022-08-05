@@ -62,8 +62,9 @@ Resources:
             Action: sts:AssumeRole
       Path: /
       ManagedPolicyArns:
-        - !Sub "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        #- !Sub "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
         - !Sub "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        - !Sub "arn:aws:iam::aws:policy/AWSLambda_FullAccess"
 
 Globals:
   Function:
