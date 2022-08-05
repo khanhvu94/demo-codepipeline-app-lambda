@@ -1,7 +1,7 @@
 node_modules
 .nyc_output
 coverage
-common-layers
+common-layers/nodejs
 
 # vscode
 *.DS_Store

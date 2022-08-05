@@ -6,7 +6,7 @@ phases:
       nodejs: 16.x
     commands:
       # Install dependencies needed for running tests
-      - mkdir common-layers/nodejs
+      - mkdir -p common-layers/nodejs
       - cp -a package.json common-layers/nodejs
       - cd common-layers/nodejs && yarn
       # Install node_modules
