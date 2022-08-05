@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16.x
+      nodejs: 14
     commands:
       # Install dependencies needed for running tests
       - mkdir -p common-layers/nodejs
@@ -20,8 +20,8 @@ phases:
       # - yarn test
       # Use cloudformation to packaged it and push to S3
       - aws cloudformation package --template-file template.yml --s3-bucket demo-pipeline-codebuild --output-template-file packaged-template.yml
-    finally:
-      - Build command failures
+    #finally:
+      #- Build command failures
   post_build:
     commands:
       # Use cloudformation deploy

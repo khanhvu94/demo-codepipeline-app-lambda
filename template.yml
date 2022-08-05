@@ -3,7 +3,7 @@ Transform:
   - AWS::Serverless-2016-10-31
 
 Parameters:
-  tage:
+  Stage:
     Type: String
     Description: The name for a project pipeline stage, such as Staging or Prod, for which resources are provisioned and deployed.
     Default: "Dev"
@@ -15,6 +15,10 @@ Parameters:
     Type: String
     Description: BucketAssest
     Default: "demo-s3-trigger"
+  CodeDeployRole:
+    Type: String
+    Description: IAM role to allow AWS CodeDeploy to manage deployment of AWS Lambda functions
+    Default: "arn:aws:iam::773930259638:role/service-role/AWSCodePipelineServiceRole-us-east-1-DemoPipelineLambda"
 
 Resources:
   CommonLayer:
