@@ -19,7 +19,7 @@ Parameters:
     Type: String
     Description: IAM role to allow AWS CodeDeploy to manage deployment of AWS Lambda
       functions
-    Default: arn:aws:iam::773930259638:role/DemoPipelinedLambdaAssumeRole
+    Default: arn:aws:iam::773930259638:role/service-role/AWSCodePipelineServiceRole-us-east-1-DemoPipelineLambda
 Resources:
   CommonLayer:
     Type: AWS::Serverless::LayerVersion
